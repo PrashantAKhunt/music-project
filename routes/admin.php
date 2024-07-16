@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\VideoController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -21,5 +22,14 @@ Route::middleware(['auth', 'verified'])
         Route::get('/{category}/edit', [CategoryController::class, 'edit'])->name('categories.edit');
         Route::put('/{category}', [CategoryController::class, 'update'])->name('categories.update');
         Route::delete('/{category}', [CategoryController::class, 'destroy'])->name('categories.destroy');
+    });
+
+    Route::prefix('videos')->group(function () {
+        Route::get('/', [VideoController::class, 'index'])->name('videos.index');
+        Route::get('/create', [VideoController::class, 'create'])->name('videos.create');
+        Route::post('/store', [VideoController::class, 'store'])->name('videos.store');
+        Route::get('/{video}/edit', [VideoController::class, 'edit'])->name('videos.edit');
+        Route::put('/{video}', [VideoController::class, 'update'])->name('videos.update');
+        Route::delete('/{video}', [VideoController::class, 'destroy'])->name('videos.destroy');
     });
 });

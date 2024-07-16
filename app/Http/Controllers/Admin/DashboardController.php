@@ -9,6 +9,8 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        return view('admin.dashboard.index');
+        $totalCategories = \App\Models\Category::count();
+        $totalVideos = \App\Models\Video::count();
+        return view('admin.dashboard.index', compact('totalCategories', 'totalVideos'));
     }
 }
