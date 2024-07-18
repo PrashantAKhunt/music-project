@@ -23,7 +23,7 @@
                     <h2 class="text-xl font-semibold mb-2">{{ $video->title }}</h2>
                     <img src="{{ asset($video->thumbnail) }}" alt="video" class="w-full h-48 object-cover mb-2">
                     <p class="text-gray-600">{{ $video->description }}</p>
-                    <a href="{{ route('videos.show', $video->slug) }}" class="block text-blue-600 mt-2">Watch Video</a>
+                    <a href="{{ route('videos.show', $video->slug) }}" class="bg-blue-600 text-white px-2 py-1 rounded mt-2 inline-block">Play Video</a>
                 </div>
             @endforeach
         </div>
@@ -40,7 +40,7 @@
                         <h2 class="text-xl font-semibold mb-2">{{ $video->title }}</h2>
                         <img src="{{ asset($video->thumbnail) }}" alt="video" class="w-full h-48 object-cover mb-2">
                         <p class="text-gray-600">{{ $video->description }}</p>
-                        <a href="{{ route('videos.show', $video->slug) }}" class="block text-blue-600 mt-2">Watch Video</a>
+                        <a href="{{ route('videos.show', $video->slug) }}" class="bg-blue-600 text-white px-2 py-1 rounded mt-2 inline-block">Play Video</a>
                     </div>
                 @endforeach
             </div>
