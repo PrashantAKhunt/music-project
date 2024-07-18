@@ -78,7 +78,7 @@ class VideoController extends Controller
             'description' => 'required',
             'video_url' => 'required',
             'category_id' => 'required',
-            'thumbnail_image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:512',
+            'thumbnail_image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg,webp|max:512',
         ]);
 
         // validate youtube url

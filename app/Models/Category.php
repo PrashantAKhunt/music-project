@@ -9,4 +9,9 @@ class Category extends Model
 {
     use HasFactory;
     protected $fillable = ['name', 'description'];
+
+    public function videos()
+    {
+        return $this->hasMany(Video::class);
+    }
 }
