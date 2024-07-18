@@ -8,7 +8,7 @@
         <a href="{{ route('admin.categories.index') }}" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700">Categories</a>
         <a href="{{ route('admin.videos.index') }}" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700">Videos</a>
         <a href="add-blog.html" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700">Blogs</a>
-        <a href="about.html" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700">About Us</a>
+        {{-- <a href="about.html" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700">About Us</a> --}}
         <!-- Add more links here -->
     </nav>
 </div>

@@ -20,8 +20,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/blogs', [BlogController::class, 'index'])->name('blogs');
 Route::get('/about-us', [HomeController::class, 'about'])->name('about-us');
-
-Route::get('/videos/{slug}', [VideoController::class, 'show'])->name('videos.show');
+Route::get('/videos', [VideoController::class, 'index'])->name('videos.index');
+Route::get('/videos/show/{slug}', [VideoController::class, 'show'])->name('videos.show');
 
 
 
