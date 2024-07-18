@@ -7,7 +7,7 @@
         <ul class="hidden md:flex space-x-4">
             <li><a href="{{ route('home') }}" class="hover:underline">Home</a></li>
             <li><a href="{{ route('videos.index') }}" class="hover:underline">Videos</a></li>
-            <li><a href="{{ route('blogs') }}" class="hover:underline">Lyrics</a></li>
+            {{-- <li><a href="{{ route('blogs') }}" class="hover:underline">Lyrics</a></li> --}}
             {{-- <li><a href="{{ route('about-us') }}" class="hover:underline">About Us</a></li> --}}
         </ul>
         <button id="menuButton" class="md:hidden focus:outline-none">
@@ -21,7 +21,7 @@
     <ul class="space-y-2">
         <li><a href="{{ route('home') }}" class="block hover:underline">Home</a></li>
         <li><a href="{{ route('videos.index') }}" class="block hover:underline">Videos</a></li>
-        <li><a href="{{ route('blogs') }}" class="block hover:underline">Lyrics</a></li>
+        {{-- <li><a href="{{ route('blogs') }}" class="block hover:underline">Lyrics</a></li> --}}
         {{-- <li><a href="{{ route('about-us') }}" class="block hover:underline">About Us</a></li> --}}
     </ul>
 </div>
