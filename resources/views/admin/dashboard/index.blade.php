@@ -12,8 +12,8 @@
             <p class="text-3xl font-bold mt-2">{{ $totalVideos }}</p>
         </div>
         <div class="bg-white p-5 rounded shadow">
-            <h2 class="text-xl font-semibold">Total Blogs</h2>
-            <p class="text-3xl font-bold mt-2">15</p>
+            <h2 class="text-xl font-semibold">Total Bhajans Lyrics</h2>
+            <p class="text-3xl font-bold mt-2">{{ $totalLyrics }}</p>
         </div>
     </div>
 @endsection
