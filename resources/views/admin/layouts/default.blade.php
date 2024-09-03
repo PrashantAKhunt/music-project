@@ -17,6 +17,7 @@
             }
         }
     </style>
+    @stack('styles')
 </head>
 <body class="bg-gray-100 flex h-screen">
     <!-- Sidebar -->
@@ -33,5 +34,6 @@
             sidebar.classList.toggle('show');
         });
     </script>
+    @stack('scripts')
 </body>
 </html>

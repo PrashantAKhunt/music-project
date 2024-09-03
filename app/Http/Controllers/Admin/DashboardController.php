@@ -11,6 +11,7 @@ class DashboardController extends Controller
     {
         $totalCategories = \App\Models\Category::count();
         $totalVideos = \App\Models\Video::count();
-        return view('admin.dashboard.index', compact('totalCategories', 'totalVideos'));
+        $totalLyrics = \App\Models\Lyrics::count();
+        return view('admin.dashboard.index', compact('totalCategories', 'totalVideos', 'totalLyrics'));
     }
 }
