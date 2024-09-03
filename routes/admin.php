@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\VideoController;
+use App\Http\Controllers\Admin\LyricsController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -31,5 +32,14 @@ Route::middleware(['auth', 'verified'])
         Route::get('/{video}/edit', [VideoController::class, 'edit'])->name('videos.edit');
         Route::put('/{video}', [VideoController::class, 'update'])->name('videos.update');
         Route::delete('/{video}', [VideoController::class, 'destroy'])->name('videos.destroy');
+    });
+
+    Route::prefix('lyrics')->group(function () {
+        Route::get('/', [LyricsController::class, 'index'])->name('lyrics.index');
+        Route::get('/create', [LyricsController::class, 'create'])->name('lyrics.create');
+        Route::post('/store', [LyricsController::class, 'store'])->name('lyrics.store');
+        Route::get('/{lyric}/edit', [LyricsController::class, 'edit'])->name('lyrics.edit');
+        Route::put('/{lyric}', [LyricsController::class, 'update'])->name('lyrics.update');
+        Route::delete('/{lyric}', [LyricsController::class, 'destroy'])->name('lyrics.destroy');
     });
 });

@@ -4,6 +4,7 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\VideoController;
+use App\Http\Controllers\LyricsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,6 +23,9 @@ Route::get('/blogs', [BlogController::class, 'index'])->name('blogs');
 Route::get('/about-us', [HomeController::class, 'about'])->name('about-us');
 Route::get('/videos', [VideoController::class, 'index'])->name('videos.index');
 Route::get('/videos/show/{slug}', [VideoController::class, 'show'])->name('videos.show');
+
+Route::get('/lyrics', [LyricsController::class, 'index'])->name('lyrics.index');
+Route::get('/lyrics/show/{slug}', [LyricsController::class, 'show'])->name('lyrics.show');
 
 
 

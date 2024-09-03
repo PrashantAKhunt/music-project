@@ -7,6 +7,7 @@
         <ul class="hidden md:flex space-x-4">
             <li><a href="{{ route('home') }}" class="hover:underline">Home</a></li>
             <li><a href="{{ route('videos.index') }}" class="hover:underline">Videos</a></li>
+            <li><a href="{{ route('lyrics.index') }}" class="hover:underline">Lyrics</a></li>
             {{-- <li><a href="{{ route('blogs') }}" class="hover:underline">Lyrics</a></li> --}}
             {{-- <li><a href="{{ route('about-us') }}" class="hover:underline">About Us</a></li> --}}
         </ul>

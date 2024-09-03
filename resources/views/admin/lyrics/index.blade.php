@@ -2,11 +2,11 @@
 
 @section('content')
 
-    <h1 class="text-2xl font-semibold">Videos</h1>
+    <h1 class="text-2xl font-semibold">Bhajan Lyrics</h1>
     <div class="mt-5">
-        <a href="{{ route('admin.videos.create') }}" class="bg-blue-600 text-white p-2 rounded">Add Video</a>
+        <a href="{{ route('admin.lyrics.create') }}" class="bg-blue-600 text-white px-4 py-2 rounded inline-block">Add New Lyrics</a>
     </div>
-    {{-- create Table  For Videos --}}
+
     <div class="mt-5">
         <table class="w-full border">
             <thead>
@@ -19,17 +19,17 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ($videos as $video)
+                @foreach ($lyrics as $lyric)
                     <tr>
                         <td class="border text-center">{{ $loop->index + 1 }}</td>
                         <td class="border">
-                            <img src="{{ asset($video->thumbnail) }}" alt="{{ $video->title }}" class="w-20 h-20 object-cover">
+                            <img src="{{ asset($lyric->thumbnail) }}" alt="{{ $lyric->title }}" class="w-20 h-20 object-cover">
                         </td>
-                        <td class="border">{{ $video->title }}</td>
-                        <td class="border">{{ $video->category->name }}</td>
+                        <td class="border">{{ $lyric->title }}</td>
+                        <td class="border">{{ $lyric->category->name }}</td>
                         <td class="border">
-                            <a href="{{ route('admin.videos.edit', $video->id) }}" class="bg-blue-300 text-white p-1 rounded m-1"><i class="fas fa-edit"></i></a>
-                            <form action="{{ route('admin.videos.destroy', $video->id) }}" method="POST" class="inline">
+                            <a href="{{ route('admin.lyrics.edit', $lyric->id) }}" class="bg-blue-300 text-white p-1 rounded m-1"><i class="fas fa-edit"></i></a>
+                            <form action="{{ route('admin.lyrics.destroy', $lyric->id) }}" method="POST" class="inline">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="bg-red-600 text-white p-1 m-1 rounded"><i class="fas fa-trash"></i></button>
@@ -39,6 +39,6 @@
                 @endforeach
             </tbody>
         </table>
-        {{ $videos->links() }}
+        {{ $lyrics->links() }}
     </div>
 @endsection

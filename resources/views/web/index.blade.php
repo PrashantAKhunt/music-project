@@ -28,6 +28,20 @@
             @endforeach
         </div>
 
+        @if($latestLyrics->count() > 0)
+            <h2 class="text-2xl font-semibold mt-8 mb-4">Latest Bhajan Lyrics</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                @foreach($latestLyrics as $lyric)
+                    <div class="bg-white p-4 rounded shadow">
+                        <h2 class="text-xl font-semibold mb-2">{{ $lyric->title }}</h2>
+                        <img src="{{ asset($lyric->thumbnail) }}" alt="video" class="w-full h-48 object-cover mb-2">
+                        <p class="text-gray-600">{{ $lyric->description }}</p>
+                        <a href="{{ route('lyrics.show', $lyric->slug) }}" class="bg-blue-600 text-white px-2 py-1 rounded mt-2 inline-block">Read Lyrics</a>
+                    </div>
+                @endforeach
+            </div>
+        @endif
+
         @foreach($categories as $category)
             @if($category->videos->isEmpty())
                 @continue
