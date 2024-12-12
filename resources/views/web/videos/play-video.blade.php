@@ -26,6 +26,7 @@
                         <img src="{{ asset($relatedVideo->thumbnail) }}" alt="Video Thumbnail" class="w-full rounded">
                         <h2 class="text-lg font-semibold mt-2">{{ $relatedVideo->title }}</h2>
                         <p class="text-gray-600">{{ $relatedVideo->description }}</p>
+                        <a href="{{ route('videos.show', $relatedVideo->slug) }}" class="bg-blue-600 text-white px-2 py-1 rounded mt-2 inline-block">Play Video</a>
                     </div>
                 @endforeach
             </div>
